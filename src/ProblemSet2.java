@@ -56,24 +56,24 @@ public class ProblemSet2 {
          System.out.print("\nEnter a dollar amount: ");
          double dollarAmount = in.nextDouble();
          double valueRemaining = dollarAmount;
-         final double dollarValue = 1.00;
-         final double quarterValue = 0.25;
-         final double dimeValue = 0.10;
-         final double nickelValue = 0.05;
-         final double pennyValue = 0.01;
-         double isThereADollar = Math.floor(dollarAmount / dollarValue);
-         valueRemaining %= dollarValue;
+         final double DOLLAR_VALUE = 1.00;
+         final double QUARTER_VALUE = 0.25;
+         final double DIME_VALUE = 0.10;
+         final double NICKEL_VALUE = 0.05;
+         final double PENNY_VALUE = 0.01;
+         double isThereADollar = Math.floor(dollarAmount / DOLLAR_VALUE);
+         valueRemaining %= DOLLAR_VALUE;
          System.out.printf("DOLLARS  : %.0f \n", isThereADollar);
-         double quarterAmount = Math.floor(valueRemaining / quarterValue);
-         valueRemaining %= quarterValue;
+         double quarterAmount = Math.floor(valueRemaining / QUARTER_VALUE);
+         valueRemaining %= QUARTER_VALUE;
          System.out.printf("QUARTERS : %.0f\n", quarterAmount);
-         double dimeAmount = Math.floor(valueRemaining / dimeValue);
-         valueRemaining %= dimeValue;
+         double dimeAmount = Math.floor(valueRemaining / DIME_VALUE);
+         valueRemaining %= DIME_VALUE;
          System.out.printf("DIMES    : %.0f\n", dimeAmount);
-         double nickelAmount = Math.floor(valueRemaining / nickelValue);
-         valueRemaining %= nickelValue;
+         double nickelAmount = Math.floor(valueRemaining / NICKEL_VALUE);
+         valueRemaining %= NICKEL_VALUE;
          System.out.printf("NICKELS  : %.0f\n", nickelAmount);
-         valueRemaining /= pennyValue;
+         valueRemaining /= PENNY_VALUE;
          System.out.printf("PENNIES  : %.0f\n", valueRemaining);
 
         /*
@@ -83,7 +83,27 @@ public class ProblemSet2 {
          * bills and coins needed to produce this amount.
          */
 
-
+         System.out.print("\nEnter a dollar amount: ");
+         valueRemaining = in.nextDouble();
+         final double FIVE_DOLLAR_VALUE = 5.00;
+         final double TEN_DOLLAR_VALUE = 10.00;
+         double billsUsed = 0;
+         double coinsUsed = 0;
+         billsUsed += Math.floor(valueRemaining / TEN_DOLLAR_VALUE);
+         valueRemaining %= TEN_DOLLAR_VALUE;
+         billsUsed += Math.floor(valueRemaining / FIVE_DOLLAR_VALUE);
+         valueRemaining %= FIVE_DOLLAR_VALUE;
+         billsUsed += Math.floor(valueRemaining / DOLLAR_VALUE);
+         valueRemaining %= DOLLAR_VALUE;
+         coinsUsed += Math.floor(valueRemaining / QUARTER_VALUE);
+         valueRemaining %= QUARTER_VALUE;
+         coinsUsed += Math.floor(valueRemaining / DIME_VALUE);
+         valueRemaining %= DIME_VALUE;
+         coinsUsed += Math.floor(valueRemaining / NICKEL_VALUE);
+         valueRemaining %= NICKEL_VALUE;
+         coinsUsed += (valueRemaining / PENNY_VALUE);
+         System.out.printf("\nBILLS : %.0f", billsUsed);
+         System.out.printf("\nCOINS : %.0f\n", coinsUsed);
 
         /*
          * Exercise 4.
