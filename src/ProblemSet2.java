@@ -28,7 +28,8 @@ public class ProblemSet2 {
          * name, grade, age, and hometown.
          */
 
-         System.out.print("Enter your first name: ");
+         /*
+         System.out.print("\nEnter your first name: ");
          String firstName = in.next();
          System.out.print("Enter your last name: ");
          String lastName = in.next();
@@ -39,11 +40,11 @@ public class ProblemSet2 {
          in.nextLine();
          System.out.print("Enter your hometown: ");
          String hometown = in.nextLine();
-         System.out.println("NAME     : " + firstName + " " + lastName);
+         System.out.println("\nNAME     : " + firstName + " " + lastName);
          System.out.println("GRADE    : " + grade);
          System.out.println("AGE      : " + age);
-         System.out.println("HOMETOWN : " + hometown);
-
+         System.out.println("HOMETOWN : " + hometown + "\n");
+         */
 
         /*
          * Exercise 2.
@@ -52,7 +53,28 @@ public class ProblemSet2 {
          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
          */
 
-
+         System.out.print("\nEnter a dollar amount: ");
+         double dollarAmount = in.nextDouble();
+         double valueRemaining = dollarAmount;
+         final double dollarValue = 1.00;
+         final double quarterValue = 0.25;
+         final double dimeValue = 0.10;
+         final double nickelValue = 0.05;
+         final double pennyValue = 0.01;
+         double isThereADollar = Math.floor(dollarAmount / dollarValue);
+         valueRemaining %= dollarValue;
+         System.out.printf("DOLLARS  : %.0f \n", isThereADollar);
+         double quarterAmount = Math.floor(valueRemaining / quarterValue);
+         valueRemaining %= quarterValue;
+         System.out.printf("QUARTERS : %.0f\n", quarterAmount);
+         double dimeAmount = Math.floor(valueRemaining / dimeValue);
+         valueRemaining %= dimeValue;
+         System.out.printf("DIMES    : %.0f\n", dimeAmount);
+         double nickelAmount = Math.floor(valueRemaining / nickelValue);
+         valueRemaining %= nickelValue;
+         System.out.printf("NICKELS  : %.0f\n", nickelAmount);
+         valueRemaining /= pennyValue;
+         System.out.printf("PENNIES  : %.0f\n", valueRemaining);
 
         /*
          * Exercise 3.
