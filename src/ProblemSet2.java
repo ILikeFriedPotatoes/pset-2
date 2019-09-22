@@ -53,6 +53,7 @@ public class ProblemSet2 {
          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
          */
 
+         /*
          System.out.print("\nEnter a dollar amount: ");
          double dollarAmount = in.nextDouble();
          double valueRemaining = dollarAmount;
@@ -75,6 +76,7 @@ public class ProblemSet2 {
          System.out.printf("NICKELS  : %.0f\n", nickelAmount);
          valueRemaining /= PENNY_VALUE;
          System.out.printf("PENNIES  : %.0f\n", valueRemaining);
+         */
 
         /*
          * Exercise 3.
@@ -83,6 +85,7 @@ public class ProblemSet2 {
          * bills and coins needed to produce this amount.
          */
 
+         /*
          System.out.print("\nEnter a dollar amount: ");
          valueRemaining = in.nextDouble();
          final double FIVE_DOLLAR_VALUE = 5.00;
@@ -104,6 +107,7 @@ public class ProblemSet2 {
          coinsUsed += (valueRemaining / PENNY_VALUE);
          System.out.printf("\nBILLS : %.0f", billsUsed);
          System.out.printf("\nCOINS : %.0f\n", coinsUsed);
+         */
 
         /*
          * Exercise 4.
@@ -112,7 +116,23 @@ public class ProblemSet2 {
          * and inches.
          */
 
+         //Delete this variable later
 
+         System.out.print("\nEnter a number of inches: ");
+         double valueRemaining = in.nextDouble();
+         final double INCHES_TO_MILES_CONVERSION = 63360;
+         final double INCHES_TO_YARD_CONVERSION = 36;
+         final double INCHES_TO_FEET_CONVERSION = 12;
+         double numberOfMiles = Math.floor(valueRemaining / INCHES_TO_MILES_CONVERSION);
+         System.out.printf("\nMILES  : %.0f" , numberOfMiles);
+         valueRemaining %= INCHES_TO_MILES_CONVERSION;
+         double numberOfYards = Math.floor(valueRemaining / INCHES_TO_YARD_CONVERSION);
+         System.out.printf("\nYARDS  : %.0f" , numberOfYards);
+         valueRemaining %= INCHES_TO_YARD_CONVERSION;
+         double numberOfFeet =  Math.floor(valueRemaining / INCHES_TO_FEET_CONVERSION);
+         System.out.printf("\nFEET   : %.0f" ,numberOfFeet);
+         valueRemaining %= INCHES_TO_FEET_CONVERSION;
+         System.out.printf("\nINCHES : %.0f\n" , valueRemaining);
 
         /*
          * Exercise 5.
