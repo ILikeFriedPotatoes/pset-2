@@ -164,9 +164,9 @@ public class ProblemSet2 {
 
          System.out.print("\nEnter a diameter: ");
          double diameter = in.nextDouble();
-         double area = Math.PI * Math.pow(diameter / 2, 2);
+         double areaOfCircle = Math.PI * Math.pow(diameter / 2, 2);
          double circumference = Math.PI * diameter;
-         System.out.printf("\nAREA          : %.2f", area);
+         System.out.printf("\nAREA          : %.2f", areaOfCircle);
          System.out.printf("\nCIRCUMFERENCE : %.2f\n", circumference);
 
         /*
@@ -176,7 +176,16 @@ public class ProblemSet2 {
          * corresponding rectangle.
          */
 
-         
+         System.out.print("\nEnter a length: ");
+         double length = in.nextDouble();
+         System.out.print("Enter a width: ");
+         double width = in.nextDouble();
+         double rectangleArea = length * width;
+         System.out.printf("\nAREA      : %.2f", rectangleArea);
+         double rectanglePerimeter = (2 * length) + (2 * width);
+         System.out.printf("\nPERIMETER : %.2f", rectanglePerimeter);
+         double diagonal = Math.hypot(width, length);
+         System.out.printf("\nDIAGONAL  : %.2f\n", diagonal);
 
         /*
          * Exercise 8.
