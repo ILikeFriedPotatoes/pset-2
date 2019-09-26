@@ -162,12 +162,14 @@ public class ProblemSet2 {
          * Given a diameter, print the area and circumference of the corresponding circle.
          */
 
+         /*
          System.out.print("\nEnter a diameter: ");
          double diameter = in.nextDouble();
          double areaOfCircle = Math.PI * Math.pow(diameter / 2, 2);
-         double circumference = Math.PI * diameter;
          System.out.printf("\nAREA          : %.2f", areaOfCircle);
+         double circumference = Math.PI * diameter;
          System.out.printf("\nCIRCUMFERENCE : %.2f\n", circumference);
+         */
 
         /*
          * Exercise 7.
@@ -176,6 +178,7 @@ public class ProblemSet2 {
          * corresponding rectangle.
          */
 
+         /*
          System.out.print("\nEnter a length: ");
          double length = in.nextDouble();
          System.out.print("Enter a width: ");
@@ -186,6 +189,7 @@ public class ProblemSet2 {
          System.out.printf("\nPERIMETER : %.2f", rectanglePerimeter);
          double diagonal = Math.hypot(width, length);
          System.out.printf("\nDIAGONAL  : %.2f\n", diagonal);
+         */
 
         /*
          * Exercise 8.
@@ -193,7 +197,14 @@ public class ProblemSet2 {
          * Given a side length, print the area and perimeter of the corresponding hexagon.
          */
 
-
+         /*
+         System.out.print("\nEnter a side length: ");
+         double sideLength = in.nextDouble();
+         double hexagonArea = Math.pow(sideLength, 2) * (3 * Math.sqrt(3) / 2);
+         System.out.printf("\nAREA      : %.2f", hexagonArea);
+         double hexagonPerimeter = 6 * sideLength;
+         System.out.printf("\nPERIMETER : %.2f\n", hexagonPerimeter);
+         */
 
         /*
          * Exercise 9.
@@ -201,7 +212,14 @@ public class ProblemSet2 {
          * Given a string, reverse and print the first and second halves of that string.
          */
 
-
+         /*
+         System.out.print("\nEnter a string: ");
+         String reversedString = in.nextLine();
+         int halfOfStringLength = reversedString.length() / 2;
+         String firstHalf = reversedString.substring(0, halfOfStringLength);
+         String lastHalf = reversedString.substring(halfOfStringLength, reversedString.length());
+         System.out.print("\n" + lastHalf + firstHalf + "\n");
+         */
 
         /*
          * Exercise 10.
