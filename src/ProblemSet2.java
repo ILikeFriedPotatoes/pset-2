@@ -28,7 +28,7 @@ public class ProblemSet2 {
          * name, grade, age, and hometown.
          */
 
-        /*
+
         System.out.print("\nEnter your first name: ");
         String firstName = in.next();
         System.out.print("Enter your last name: ");
@@ -40,11 +40,11 @@ public class ProblemSet2 {
         in.nextLine();
         System.out.print("Enter your hometown: ");
         String hometown = in.nextLine();
-        System.out.println("\nNAME   : " + firstName + " " + lastName );
+        System.out.println("\nNAME     : " + firstName + " " + lastName );
         System.out.println("GRADE    : " + grade );
         System.out.println("AGE      : " + age );
         System.out.println("HOMETOWN : " + hometown );
-        */
+
 
         /*
          * Exercise 2.
@@ -53,7 +53,7 @@ public class ProblemSet2 {
          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
          */
 
-         /*
+
          System.out.print("\nEnter a dollar amount: ");
          double dollarAmount = in.nextDouble();
          double valueRemaining = dollarAmount;
@@ -76,7 +76,7 @@ public class ProblemSet2 {
          final double PENNY_VALUE = 0.01;
          valueRemaining /= PENNY_VALUE;
          System.out.printf("PENNIES  : %.0f\n", valueRemaining);
-         */
+
 
         /*
          * Exercise 3.
@@ -85,7 +85,7 @@ public class ProblemSet2 {
          * bills and coins needed to produce this amount.
          */
 
-         /*
+
          System.out.print("\nEnter a dollar amount: ");
          valueRemaining = in.nextDouble();
          double billsUsed = 0;
@@ -107,7 +107,7 @@ public class ProblemSet2 {
          coinsUsed += (valueRemaining / PENNY_VALUE);
          System.out.printf("\nBILLS : %.0f", billsUsed);
          System.out.printf("\nCOINS : %.0f\n", coinsUsed);
-         */
+
 
         /*
          * Exercise 4.
@@ -116,8 +116,6 @@ public class ProblemSet2 {
          * and inches.
          */
 
-         //Delete this variable later
-         /*
          System.out.print("\nEnter a number of inches: ");
          valueRemaining = in.nextDouble();
          final double INCHES_TO_MILES_CONVERSION = 63360;
@@ -133,18 +131,18 @@ public class ProblemSet2 {
          System.out.printf("\nFEET   : %.0f" ,numberOfFeet);
          valueRemaining %= INCHES_TO_FEET_CONVERSION;
          System.out.printf("\nINCHES : %.0f\n" , valueRemaining);
-         */
 
-        /*
+
+         /*
          * Exercise 5.
          *
          * Given a number of centimeters, print the equivalent number of kilometers,
          * meters, and centimeters.
          */
 
-         /*
+
          System.out.print("\nEnter a number of centimeters: ");
-         double valueRemaining = in.nextDouble();
+         valueRemaining = in.nextDouble();
          final double CENTIMETER_TO_KILOMETERS_CONVERSION = 100000;
          double kilometers = Math.floor(valueRemaining / CENTIMETER_TO_KILOMETERS_CONVERSION);
          System.out.printf("\nKILOMETERS  : %.0f", kilometers);
@@ -153,8 +151,8 @@ public class ProblemSet2 {
          double meters = Math.floor(valueRemaining / CENTIMETER_TO_METERS_CONVERSION);
          System.out.printf("\nMETERS      : %.0f", meters);
          valueRemaining %= CENTIMETER_TO_METERS_CONVERSION;
-         System.out.printf("\nCENTIMETERS : %.0f\n", valueRemaining\n);
-         */
+         System.out.printf("\nCENTIMETERS : %.0f\n", valueRemaining);
+
 
         /*
          * Exercise 6.
@@ -162,14 +160,14 @@ public class ProblemSet2 {
          * Given a diameter, print the area and circumference of the corresponding circle.
          */
 
-         /*
+
          System.out.print("\nEnter a diameter: ");
          double diameter = in.nextDouble();
          double areaOfCircle = Math.PI * Math.pow(diameter / 2, 2);
          System.out.printf("\nAREA          : %.2f", areaOfCircle);
          double circumference = Math.PI * diameter;
          System.out.printf("\nCIRCUMFERENCE : %.2f\n", circumference);
-         */
+
 
         /*
          * Exercise 7.
@@ -178,7 +176,7 @@ public class ProblemSet2 {
          * corresponding rectangle.
          */
 
-         /*
+
          System.out.print("\nEnter a length: ");
          double length = in.nextDouble();
          System.out.print("Enter a width: ");
@@ -189,7 +187,7 @@ public class ProblemSet2 {
          System.out.printf("\nPERIMETER : %.2f", rectanglePerimeter);
          double diagonal = Math.hypot(width, length);
          System.out.printf("\nDIAGONAL  : %.2f\n", diagonal);
-         */
+
 
         /*
          * Exercise 8.
@@ -197,14 +195,14 @@ public class ProblemSet2 {
          * Given a side length, print the area and perimeter of the corresponding hexagon.
          */
 
-         /*
+
          System.out.print("\nEnter a side length: ");
          double sideLength = in.nextDouble();
          double hexagonArea = Math.pow(sideLength, 2) * (3 * Math.sqrt(3) / 2);
          System.out.printf("\nAREA      : %.2f", hexagonArea);
          double hexagonPerimeter = 6 * sideLength;
          System.out.printf("\nPERIMETER : %.2f\n", hexagonPerimeter);
-         */
+
 
         /*
          * Exercise 9.
@@ -212,14 +210,14 @@ public class ProblemSet2 {
          * Given a string, reverse and print the first and second halves of that string.
          */
 
-         /*
+         in.nextLine();
          System.out.print("\nEnter a string: ");
          String reversedString = in.nextLine();
          int halfOfStringLength = reversedString.length() / 2;
          String firstHalf = reversedString.substring(0, halfOfStringLength);
          String lastHalf = reversedString.substring(halfOfStringLength, reversedString.length());
          System.out.print("\n" + lastHalf + firstHalf + "\n");
-         */
+
 
         /*
          * Exercise 10.
@@ -227,7 +225,16 @@ public class ProblemSet2 {
          * Given a first, middle, and last name, print the corresponding initials.
          */
 
-
+         System.out.print("\nEnter your first name: ");
+         firstName = in.nextLine();
+         char firstInitial = firstName.charAt(0);
+         System.out.print("Enter your middle name: ");
+         String middleName = in.nextLine();
+         char middleInitial = middleName.charAt(0);
+         System.out.print("Enter your last name: ");
+         lastName = in.nextLine();
+         char lastInitial = lastName.charAt(0);
+         System.out.print("\n" + firstInitial + middleInitial + lastInitial + "\n");
 
         in.close();
     }
