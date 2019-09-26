@@ -57,9 +57,12 @@ public class ProblemSet2 {
          System.out.print("\nEnter a dollar amount: ");
          double dollarAmount = in.nextDouble();
          double valueRemaining = dollarAmount;
+
+         //Defines the value of the amount of coins/bills that can make up the given dollar amount
          final double DOLLAR_VALUE = 1.00;
          double isThereADollar = Math.floor(dollarAmount / DOLLAR_VALUE);
          valueRemaining %= DOLLAR_VALUE;
+
          System.out.printf("\nDOLLARS  : %.0f \n", isThereADollar);
          final double QUARTER_VALUE = 0.25;
          double quarterAmount = Math.floor(valueRemaining / QUARTER_VALUE);
@@ -88,23 +91,23 @@ public class ProblemSet2 {
 
          System.out.print("\nEnter a dollar amount: ");
          valueRemaining = in.nextDouble();
-         double billsUsed = 0;
-         double coinsUsed = 0;
-         final double TEN_DOLLAR_VALUE = 10.00;
-         billsUsed += Math.floor(valueRemaining / TEN_DOLLAR_VALUE);
+         int billsUsed = 0;
+         int coinsUsed = 0;
+         final int TEN_DOLLAR_VALUE = 10;
+         billsUsed += (int)(valueRemaining / TEN_DOLLAR_VALUE);
          valueRemaining %= TEN_DOLLAR_VALUE;
-         final double FIVE_DOLLAR_VALUE = 5.00;
-         billsUsed += Math.floor(valueRemaining / FIVE_DOLLAR_VALUE);
+         final int FIVE_DOLLAR_VALUE = 5;
+         billsUsed += (int)(valueRemaining / FIVE_DOLLAR_VALUE);
          valueRemaining %= FIVE_DOLLAR_VALUE;
-         billsUsed += Math.floor(valueRemaining / DOLLAR_VALUE);
+         billsUsed += (int)(Math.floor(valueRemaining / DOLLAR_VALUE));
          valueRemaining %= DOLLAR_VALUE;
-         coinsUsed += Math.floor(valueRemaining / QUARTER_VALUE);
+         coinsUsed += (int)(Math.floor(valueRemaining / QUARTER_VALUE));
          valueRemaining %= QUARTER_VALUE;
-         coinsUsed += Math.floor(valueRemaining / DIME_VALUE);
+         coinsUsed += (int)(Math.floor(valueRemaining / DIME_VALUE));
          valueRemaining %= DIME_VALUE;
-         coinsUsed += Math.floor(valueRemaining / NICKEL_VALUE);
+         coinsUsed += (int)(Math.floor(valueRemaining / NICKEL_VALUE));
          valueRemaining %= NICKEL_VALUE;
-         coinsUsed += (valueRemaining / PENNY_VALUE);
+         coinsUsed += (int)(valueRemaining / PENNY_VALUE);
          System.out.printf("\nBILLS : %.0f", billsUsed);
          System.out.printf("\nCOINS : %.0f\n", coinsUsed);
 
