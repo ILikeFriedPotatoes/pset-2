@@ -91,23 +91,23 @@ public class ProblemSet2 {
 
          System.out.print("\nEnter a dollar amount: ");
          valueRemaining = in.nextDouble();
-         int billsUsed = 0;
-         int coinsUsed = 0;
-         final int TEN_DOLLAR_VALUE = 10;
-         billsUsed += (int)(valueRemaining / TEN_DOLLAR_VALUE);
+         double billsUsed = 0;
+         double coinsUsed = 0;
+         final double TEN_DOLLAR_VALUE = 10;
+         billsUsed += Math.floor(valueRemaining / TEN_DOLLAR_VALUE);
          valueRemaining %= TEN_DOLLAR_VALUE;
-         final int FIVE_DOLLAR_VALUE = 5;
-         billsUsed += (int)(valueRemaining / FIVE_DOLLAR_VALUE);
+         final double FIVE_DOLLAR_VALUE = 5;
+         billsUsed += Math.floor(valueRemaining / FIVE_DOLLAR_VALUE);
          valueRemaining %= FIVE_DOLLAR_VALUE;
-         billsUsed += (int)(Math.floor(valueRemaining / DOLLAR_VALUE));
+         billsUsed += (Math.floor(valueRemaining / DOLLAR_VALUE));
          valueRemaining %= DOLLAR_VALUE;
-         coinsUsed += (int)(Math.floor(valueRemaining / QUARTER_VALUE));
+         coinsUsed += (Math.floor(valueRemaining / QUARTER_VALUE));
          valueRemaining %= QUARTER_VALUE;
-         coinsUsed += (int)(Math.floor(valueRemaining / DIME_VALUE));
+         coinsUsed += (Math.floor(valueRemaining / DIME_VALUE));
          valueRemaining %= DIME_VALUE;
-         coinsUsed += (int)(Math.floor(valueRemaining / NICKEL_VALUE));
+         coinsUsed += (Math.floor(valueRemaining / NICKEL_VALUE));
          valueRemaining %= NICKEL_VALUE;
-         coinsUsed += (int)(valueRemaining / PENNY_VALUE);
+         coinsUsed += (valueRemaining / PENNY_VALUE);
          System.out.printf("\nBILLS : %.0f", billsUsed);
          System.out.printf("\nCOINS : %.0f\n", coinsUsed);
 
